@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\anshi\OneDrive\Desktop\Css Illustrations\gorilla.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Genos', sans-serif;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    background-color: cadetblue;
+    background: linear-gradient(15deg, #848482 30%, #b0c4de 70%);
+    display: grid;
+    place-items: center;
+}
+.box{
+    height: 320px;
+    width: 320px;
+    background-color: #c4cccf;
+    position: relative;
+    border-bottom: 10px solid #c4cccf;
+    box-shadow: 0 0 0.75vmin 0.75vmin #1115;
+}
+.face{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    border-radius:40px;
+    background: #4b4b4b;
+}
+.ear{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 240px;
+    height: 40px;
+    background: #7b7b7b;
+    border-radius: 10px;
+}
+.eye{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 140px;
+    background: #7b7b7b;
+    height: 60px;
+    border-radius:30px;
+}
+.eyebrow{
+    height: 15px;
+    width: 90px;
+    background: #4b4b4b;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+}
+.eyebrow::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    border-radius: 10px;
+    background-color: #4b4b4b;
+    height: 35px;
+    left: 30%;
+}
+.eyebrow::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    border-radius: 10px;
+    background-color: #4b4b4b;
+    height: 35px;
+    right: 30%;
+}
+.nose{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 100px;
+    background: #7b7b7b;
+    height: 75px;
+    border-radius:25px;
+}
+.nose::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    border-radius: 15px 15px 5px 15px;
+    background-color: #4b4b4b;
+    height: 30px;
+    top: 20%;
+    left: 8%;
+}
+.nose::after{
+    content: "";
+    position: absolute;
+    width: 40px;
+    border-radius: 15px 15px 15px 5px;
+    background-color: #4b4b4b;
+    height: 30px;
+    top: 20%;
+    right: 8%;
+}
+.smile{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 7px;
+    width: 100%;
+    background: #4b4b4b;
+}
+.loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #141f23;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: load 3s 2s linear both;
+    z-index: 5;
+}
+.loading h2{
+    background: linear-gradient(15deg, #b0c4de 30%, #848482 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+.loading p{
+    background: linear-gradient(15deg, #f2f0f6 30%, #fbc5b7 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* letter-spacing: 2px; */
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+@keyframes load{
+    90%{
+    opacity: 0;
+    }
+    100%{
+    z-index: -100;
+    }
+}
+    </style>
+    <main>
+        <div class="box">
+            <div class="ear"></div>
+            <div class="face">
+                <div class="eye">
+                    <div class="eyebrow"></div>
+                </div>
+                <div class="nose">
+                    <div class="smile"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="loading">
+        <h2>LOADING...</h2>
+        <p>"When I look into the eyes of an animal I do not see an animal. I see a living being. I see a friend. I feel a soul."</p>
+    </div>
+</body>
+</html>
